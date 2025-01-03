@@ -1,0 +1,16 @@
+# Ignore Unity's PackageCache directories
+SRsystem/Library/PackageCache/
+AIsystem/Library/PackageCache/
+
+# Ignore specific large files
+SRsystem/Assets/StreamingAssets/AudioDecoder_Tiny.sentis
+
+# Optionally, ignore all dynamic libraries and similar large binaries
+*.dll
+*.dylib
+*.so
+
+# Ignore build directories (if applicable)
+build/
+dist/
+
