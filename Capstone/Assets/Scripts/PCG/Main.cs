@@ -60,16 +60,16 @@ public class Main : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (stepByStep)
-            {
-                delaunayTriangulation = new DelaunayTriangulation(new List<Room>());
-                delaunayTriangulation.DeleteAllEdges(edgesParent.transform);
-                currentGeneration = 0;
-                (mapGenerator, map) = InitiateMap();
-                DisplayMap(null);
-            }
-            else
-                InstantlyGenerateMap();
+            // if (stepByStep)
+            // {
+            //     delaunayTriangulation = new DelaunayTriangulation(new List<Room>());
+            //     delaunayTriangulation.DeleteAllEdges(edgesParent.transform);
+            //     currentGeneration = 0;
+            //     (mapGenerator, map) = InitiateMap();
+            //     DisplayMap(null);
+            // }
+            // else
+            //     InstantlyGenerateMap();
         }
         else if (Input.GetKeyDown(KeyCode.C) && 0 <= currentGeneration && currentGeneration < generations)
         {
@@ -150,7 +150,7 @@ public class Main : MonoBehaviour
         mapDisplayer.DisplayCorridors(map);
     }
 
-    private void InstantlyGenerateMap()
+    public void InstantlyGenerateMap()
     {
         StartCoroutine(InstantlyGenerateMapCoroutine());
     }
